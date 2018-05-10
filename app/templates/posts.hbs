@@ -1,0 +1,22 @@
+{{outlet}}
+<h1>All Posts</h1>
+
+
+<div class="ui divided items">
+  {{#each model as |post|}}
+    <div class="item">
+      <div class="image">
+        <img src="https://semantic-ui.com/images/wireframe/image.png">
+      </div>
+      <div class="content">
+        <a class="header">{{post.title}}</a>
+        <div class="description">
+          <p>{{post.description}}</p>
+        </div>
+        <div class="content">
+          {{moment-format post.created 'MMMM D, YYYY h:mm A'}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

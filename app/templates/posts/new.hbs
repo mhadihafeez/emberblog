@@ -1,0 +1,12 @@
+<h1>Create Post</h1>
+<form>
+  <div class="ui form">
+    <div class="field">
+      <label>Post Title</label> {{input type="text" value=title}}
+    </div>
+    <div class="field">
+      <label>Description</label> {{textarea value=description}}
+    </div>
+    <button {{action 'createPost'}} class="positive ui button">Create</button>
+  </div>
+</form>

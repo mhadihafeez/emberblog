@@ -4,6 +4,20 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-blog',
     environment,
+    firebase: {
+      apiKey: "AIzaSyDzUbIgQ-4mic00tIvAefV4tD_a2mwyYdc",
+      authDomain: "emberblog-a398d.firebaseapp.com",
+      databaseURL: "https://emberblog-a398d.firebaseio.com",
+      projectId: "emberblog-a398d",
+      storageBucket: "emberblog-a398d.appspot.com",
+      messagingSenderId: "78472405963"
+    },
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
