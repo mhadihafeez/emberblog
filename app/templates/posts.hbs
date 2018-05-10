@@ -1,7 +1,6 @@
 {{outlet}}
 <h1>All Posts</h1>
 
-
 <div class="ui divided items">
   {{#each model as |post|}}
     <div class="item">
@@ -16,7 +15,14 @@
         <div class="content">
           {{moment-format post.created 'MMMM D, YYYY h:mm A'}}
         </div>
+        <div class="mg-top5">
+          {{#link-to 'posts.edit' post.id}}
+            <button class="ui blue button">Edit</button>
+          {{/link-to}}
+          <button {{action 'deletePost' post.id}} class="ui red button">Delete</button>
+        </div>
       </div>
+
     </div>
   {{/each}}
 </div>

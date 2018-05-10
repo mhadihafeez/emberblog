@@ -1,0 +1,13 @@
+{{outlet}}
+<h1>Edit Post</h1>
+<form>
+  <div class="ui form">
+    <div class="field">
+      <label>Post Title</label> {{input type="text" value=model.title}}
+    </div>
+    <div class="field">
+      <label>Description</label> {{textarea value=model.description}}
+    </div>
+    <button {{action 'editPost' model.id}} class="positive ui button">Save</button>
+  </div>
+</form>
